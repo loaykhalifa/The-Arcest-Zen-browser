@@ -1,0 +1,23 @@
+
+.pip-wrapper {
+    display: none !important;
+    } 
+
+    @-moz-document url-prefix("https://web.whatsapp.com/") {
+      .selectable-text , .x13faqbe * {
+        font-size: x-large !important;
+        line-height: 1.2 !important;
+      }
+    }
+
+   @-moz-document url-prefix("https://www.youtube.com/") {
+    #video-title.ytd-rich-grid-media {
+    font-family: "Poppins", "Poppins", sans-serif !important;
+    font-size: 2rem !important;
+    line-height: 2.1rem !important;
+    font-weight: 500 !important;
+  }
+     .html5-video-player .video-stream {
+       border-radius: 10px;
+     }
+}
