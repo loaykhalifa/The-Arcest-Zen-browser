@@ -686,10 +686,13 @@ box-shadow: 0 0px 11px 1px rgb(0 0 0 / .3) !important;}
    &:not([indicator-replaces-favicon]) {
      &:is([soundplaying], [muted], [activemedia-blocked]){
     opacity: 1 !important;
-    margin: initial !important;
+   margin: inherit;
     border: none !important;
-    margin-right:15px !important;
-    transform: translate(110%, 22%) scale(1.5) !important;
+    margin-inline-end: 30px !important;/*
+    transform: translate(120%, 45%) scale(1) !important;*/
+       top:0px!important;
+       right: -25px!important;
+       scale: 1.7;
     background-color: transparent !important;
     list-style-image: none !important;
     fill: light-dark(black, white) !important;
@@ -697,8 +700,9 @@ box-shadow: 0 0px 11px 1px rgb(0 0 0 / .3) !important;}
     
     &:hover {
       fill: var(--warning-icon-bgcolor) !important;
+       scale: 2;
       transition: 0.2s;
-       transform: translate(110%, 22%) scale(1.7) !important;
+      
       
      }
     }
@@ -735,17 +739,13 @@ box-shadow: 0 0px 11px 1px rgb(0 0 0 / .3) !important;}
 
 /*===============================*/
 
-scrollbox:nth-child(5) {
-  scrollbar-width: none !important;
-}
-/* Pinned Tabs */
-#vertical-pinned-tabs-container {
-  scrollbar-width: none !important;
+
+scrollbar, scrollbarbutton, scrollcorner, slider, thumb, resizer {
+  width: 0px !important;
+  display: none !important;
 }
 
-
-
-
+/*menu*/
 panel>*{
   background: var(--zen-main-browser-background);
   opacity: .7;
@@ -759,5 +759,17 @@ bigger selected icons
 */
 .tab-icon-image:is([selected=""],
 .tabbrowser-tab[multiselected="true"] .tab-icon-image) {
-  scale: 1.7!important;
+  scale: 2!important;
 }
+.tab-icon-image:is([selected=""]:not([pinned=""]),
+.tabbrowser-tab[multiselected="true"] .tab-icon-image) {
+ transform: translate(-10%, 0%);
+}
+
+#zen-essentials-container .tabbrowser-tab {
+  & .tab-icon-image, & .tab-icon-overlay {
+   scale:1.5;
+  }
+}
+
+
