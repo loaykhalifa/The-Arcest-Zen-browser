@@ -195,7 +195,11 @@ background-color: #e61d1d00 !important;
       transition:  background-color 3s ease-in-out !important;
      
 }
-      .html5-video-player, .video-stream {
+     
+    
+video.video-stream.html5-main-video {
+        position: fixed !important;
+        top:0px;
        border-radius: 8px 8px 18px 18px!important;
       
         
@@ -288,7 +292,8 @@ background-color: #e61d1d00 !important;
   }
   .bg-neutral-background,
   .bg-neutral-background-weak {
-    background: rgba(0, 0, 0, 0.1) !important;
+     background-color: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(3px);
   }
   .bg-\[color\:var\(--shreddit-content-background\)\] {
     background-color: transparent !important;
@@ -477,11 +482,13 @@ background-color: #e61d1d00 !important;
 
 
 
-
+@-moz-document domain("about:about") {
+  background: transparent;
+}
 
 /* new */
 
-@-moz-document url("about:home"), url("about:newtab") {
+@-moz-document domain("about:home"), domain("about:newtab"){
   
   /* accent color */
   :root{
